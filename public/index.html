@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal Portfolio of Anshu Thakur, Computer Engineering student and Full-Stack Developer for Thiranex Internship. Featuring Suraksha Kawach AI Fraud Detection, Mausam Weather App, and Crime Record Management System.">
+  <meta name="keywords" content="Anshu Thakur, Portfolio, Computer Engineering, Full Stack Developer, Thiranex, Node.js, Express, MySQL">
+  <meta name="author" content="Anshu Thakur">
+  <title>Anshu Thakur | Computer Engineering Student & Full-Stack Developer</title>
+
+  <!-- Google Fonts: Outfit & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       NAVIGATION BAR
+       ========================================================================= -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="nav-logo" id="navLogo">
+        <span class="logo-badge">AT</span>
+        <span>Anshu<span class="gradient-text">.dev</span></span>
+      </a>
+
+      <!-- Desktop & Mobile Nav Links -->
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right Nav Status & Actions -->
+      <div class="nav-actions">
+        <div class="db-badge" id="dbStatusBadge" title="Checking MySQL database status...">
+          <span class="status-dot"></span> Checking DB...
+        </div>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       HERO / HOME SECTION
+       ========================================================================= -->
+  <section class="section hero-section" id="home">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <i class="fa-solid fa-graduation-cap"></i> Thiranex Full-Stack Intern • Computer Engineering
+        </div>
+
+        <h1 class="hero-title">
+          Hi, I'm <span class="gradient-text">Anshu Thakur</span>
+        </h1>
+
+        <div class="hero-role-wrapper">
+          <span>&gt;</span>
+          <span id="typingRole">Computer Engineering Student</span>
+          <span class="cursor-blink">|</span>
+        </div>
+
+        <p class="hero-description">
+          An aspiring software engineer crafting responsive full-stack applications, intelligent AI/ML models, and reliable database architectures. Focused on clean code and user-centered design.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary" id="heroProjectsBtn">
+            <i class="fa-solid fa-layer-group"></i> Explore Projects
+          </a>
+          <a href="#contact" class="btn btn-secondary" id="heroContactBtn">
+            <i class="fa-solid fa-envelope"></i> Get In Touch
+          </a>
+          <a href="#about" class="btn btn-secondary btn-sm" id="heroResumeBtn" title="Anshu Thakur Resume">
+            <i class="fa-solid fa-file-lines"></i> View Bio & CV
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <h3>3+</h3>
+            <p>Core Projects</p>
+          </div>
+          <div class="stat-item">
+            <h3>15+</h3>
+            <p>Technologies</p>
+          </div>
+          <div class="stat-item">
+            <h3>SIH</h3>
+            <p>Hackathon Inno</p>
+          </div>
+          <div class="stat-item">
+            <h3>100%</h3>
+            <p>Engineering Drive</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="avatar-wrapper">
+          <img src="/assets/avatar.svg" alt="Anshu Thakur Developer Avatar" class="avatar-image">
+        </div>
+
+        <!-- Floating decorative badges -->
+        <div class="floating-pill pill-1">
+          <i class="fa-solid fa-brain" style="color: #00f2fe;"></i>
+          <span>AI & Fraud ML</span>
+        </div>
+
+        <div class="floating-pill pill-2">
+          <i class="fa-brands fa-node-js" style="color: #6366f1;"></i>
+          <span>Express & MySQL API</span>
+        </div>
+
+        <div class="floating-pill pill-3">
+          <i class="fa-solid fa-cloud-sun-rain" style="color: #10b981;"></i>
+          <span>Smart Weather SIH</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       ABOUT SECTION
+       ========================================================================= -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-user"></i> About Me</span>
+        <h2 class="section-title">Engineering Mindset & Passion For Innovation</h2>
+        <p class="section-subtitle">
+          Building practical software solutions by connecting full-stack engineering with data-driven AI systems.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-content">
+          <p>
+            Hello! I am <strong>Anshu Thakur</strong>, a Computer Engineering student and Full-Stack Development intern with <strong>Thiranex</strong>. I enjoy architecting end-to-end software solutions that solve real problems, ranging from algorithmic financial fraud detection to interactive meteorological advisory tools and secure database record management systems.
+          </p>
+          <p>
+            My engineering philosophy centers on clean structure, modular API development, and deep understanding of computer science fundamentals—including data structures, algorithms, relational database normalization, and responsive user experiences.
+          </p>
+
+          <div class="about-info-grid">
+            <div class="info-item">
+              <span class="info-label">Degree</span>
+              <p class="info-value">B.Tech / B.E. Computer Engineering</p>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Internship</span>
+              <p class="info-value">Thiranex Full-Stack Development</p>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Location</span>
+              <p class="info-value">India</p>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Focus Area</span>
+              <p class="info-value">Full-Stack Web & AI/ML Solutions</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="strengths-grid">
+          <div class="strength-card">
+            <div class="strength-icon">
+              <i class="fa-solid fa-code"></i>
+            </div>
+            <div class="strength-info">
+              <h4>Full-Stack Architecture</h4>
+              <p>Designing RESTful APIs with Node.js & Express, relational data schemas with MySQL, and responsive dark-mode frontends using modern vanilla web technologies.</p>
+            </div>
+          </div>
+
+          <div class="strength-card">
+            <div class="strength-icon">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <div class="strength-info">
+              <h4>AI / ML Intelligence</h4>
+              <p>Developing predictive models with Python, XGBoost, and SHAP explainability to convert complex transactional data into actionable security insights.</p>
+            </div>
+          </div>
+
+          <div class="strength-card">
+            <div class="strength-icon">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <div class="strength-info">
+              <h4>Database & Security Integrity</h4>
+              <p>Structuring relational databases with strict constraints, prepared statements, input sanitization, and scalable indexing in MySQL.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SKILLS SECTION
+       ========================================================================= -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-cubes"></i> Technical Skills</span>
+        <h2 class="section-title">Tools, Technologies & Frameworks</h2>
+        <p class="section-subtitle">
+          Core technical competencies honed through coursework, hackathons, and internship project implementations.
+        </p>
+      </div>
+
+      <div class="skills-grid">
+        <!-- 1. Programming Languages -->
+        <div class="skill-category-card">
+          <div class="category-header">
+            <div class="category-icon"><i class="fa-solid fa-terminal"></i></div>
+            <h3>Programming Languages</h3>
+          </div>
+          <div class="skill-pills">
+            <span class="skill-pill"><i class="fa-brands fa-python" style="color: #38bdf8;"></i> Python</span>
+            <span class="skill-pill"><i class="fa-brands fa-java" style="color: #f87171;"></i> Java</span>
+            <span class="skill-pill"><i class="fa-solid fa-file-code" style="color: #818cf8;"></i> C++</span>
+            <span class="skill-pill"><i class="fa-brands fa-js" style="color: #fbbf24;"></i> JavaScript (ES6+)</span>
+            <span class="skill-pill"><i class="fa-solid fa-database" style="color: #00f2fe;"></i> SQL (MySQL)</span>
+          </div>
+        </div>
+
+        <!-- 2. Web Development -->
+        <div class="skill-category-card">
+          <div class="category-header">
+            <div class="category-icon"><i class="fa-solid fa-laptop-code"></i></div>
+            <h3>Frontend Development</h3>
+          </div>
+          <div class="skill-pills">
+            <span class="skill-pill"><i class="fa-brands fa-html5" style="color: #f97316;"></i> HTML5 (Semantic)</span>
+            <span class="skill-pill"><i class="fa-brands fa-css3-alt" style="color: #38bdf8;"></i> CSS3 (Flex & Grid)</span>
+            <span class="skill-pill"><i class="fa-solid fa-wand-magic-sparkles" style="color: #a855f7;"></i> Glassmorphism UI</span>
+            <span class="skill-pill"><i class="fa-solid fa-mobile-screen" style="color: #34d399;"></i> Responsive Design</span>
+            <span class="skill-pill"><i class="fa-solid fa-universal-access" style="color: #60a5fa;"></i> Web Accessibility</span>
+          </div>
+        </div>
+
+        <!-- 3. Backend & Databases -->
+        <div class="skill-category-card">
+          <div class="category-header">
+            <div class="category-icon"><i class="fa-solid fa-server"></i></div>
+            <h3>Backend & Database</h3>
+          </div>
+          <div class="skill-pills">
+            <span class="skill-pill"><i class="fa-brands fa-node" style="color: #22c55e;"></i> Node.js</span>
+            <span class="skill-pill"><i class="fa-solid fa-network-wired" style="color: #e2e8f0;"></i> Express.js</span>
+            <span class="skill-pill"><i class="fa-solid fa-database" style="color: #00f2fe;"></i> MySQL Relational DB</span>
+            <span class="skill-pill"><i class="fa-solid fa-plug" style="color: #a78bfa;"></i> RESTful APIs</span>
+            <span class="skill-pill"><i class="fa-solid fa-lock" style="color: #f43f5e;"></i> Prepared Statements</span>
+          </div>
+        </div>
+
+        <!-- 4. AI & Data Science -->
+        <div class="skill-category-card">
+          <div class="category-header">
+            <div class="category-icon"><i class="fa-solid fa-brain"></i></div>
+            <h3>AI & Data Science</h3>
+          </div>
+          <div class="skill-pills">
+            <span class="skill-pill"><i class="fa-solid fa-microchip" style="color: #f43f5e;"></i> XGBoost</span>
+            <span class="skill-pill"><i class="fa-solid fa-magnifying-glass-chart" style="color: #38bdf8;"></i> SHAP Explainability</span>
+            <span class="skill-pill"><i class="fa-solid fa-table" style="color: #fbbf24;"></i> Pandas & NumPy</span>
+            <span class="skill-pill"><i class="fa-solid fa-cubes-stacked" style="color: #ec4899;"></i> Scikit-Learn</span>
+            <span class="skill-pill"><i class="fa-solid fa-desktop" style="color: #ef4444;"></i> Streamlit</span>
+          </div>
+        </div>
+
+        <!-- 5. Developer Tools & Environment -->
+        <div class="skill-category-card">
+          <div class="category-header">
+            <div class="category-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+            <h3>Tools & Workflow</h3>
+          </div>
+          <div class="skill-pills">
+            <span class="skill-pill"><i class="fa-brands fa-git-alt" style="color: #f97316;"></i> Git & GitHub</span>
+            <span class="skill-pill"><i class="fa-solid fa-code" style="color: #38bdf8;"></i> VS Code</span>
+            <span class="skill-pill"><i class="fa-solid fa-server" style="color: #fb923c;"></i> XAMPP / MariaDB</span>
+            <span class="skill-pill"><i class="fa-solid fa-paper-plane" style="color: #f97316;"></i> Postman</span>
+            <span class="skill-pill"><i class="fa-brands fa-windows" style="color: #60a5fa;"></i> Windows PowerShell</span>
+          </div>
+        </div>
+
+        <!-- 6. Engineering Core -->
+        <div class="skill-category-card">
+          <div class="category-header">
+            <div class="category-icon"><i class="fa-solid fa-book-bookmark"></i></div>
+            <h3>Computer Science Core</h3>
+          </div>
+          <div class="skill-pills">
+            <span class="skill-pill"><i class="fa-solid fa-sitemap" style="color: #38bdf8;"></i> Data Structures</span>
+            <span class="skill-pill"><i class="fa-solid fa-route" style="color: #34d399;"></i> Algorithms</span>
+            <span class="skill-pill"><i class="fa-solid fa-diagram-project" style="color: #a78bfa;"></i> OOP Architecture</span>
+            <span class="skill-pill"><i class="fa-solid fa-hard-drive" style="color: #f59e0b;"></i> DBMS & Normalization</span>
+            <span class="skill-pill"><i class="fa-solid fa-network-wired" style="color: #38bdf8;"></i> Computer Networks</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       PROJECTS SECTION
+       ========================================================================= -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-briefcase"></i> Featured Projects</span>
+        <h2 class="section-title">Practical Engineering Work</h2>
+        <p class="section-subtitle">
+          Real-world prototypes and software applications fetched live from MySQL database via Express REST API.
+        </p>
+      </div>
+
+      <!-- Category Filter Buttons -->
+      <div class="projects-filter-bar">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="AI / Machine Learning">AI & Machine Learning</button>
+        <button class="filter-btn" data-filter="Web Development / SIH">Web Development / SIH</button>
+        <button class="filter-btn" data-filter="Full Stack / Database">Full Stack / Database</button>
+      </div>
+
+      <!-- Project Cards Grid (Populated dynamically by JavaScript from MySQL API) -->
+      <div class="projects-grid" id="projectsContainer">
+        <!-- Rendered dynamically by main.js -->
+      </div>
+
+      <!-- Helper info for evaluator/user -->
+      <div style="margin-top: 40px; padding: 20px 24px; background: rgba(0, 242, 254, 0.05); border: 1px dashed rgba(0, 242, 254, 0.25); border-radius: 12px; font-size: 0.9rem; color: #94a3b8; display: flex; align-items: center; justify-content: space-between; flex-wrap: gap: 14px;">
+        <div>
+          <strong style="color: #00f2fe;"><i class="fa-solid fa-circle-info"></i> MySQL Data Management:</strong>
+          These project records are stored in the MySQL table <code>projects</code>. To add or modify cards, update the records in MySQL or use the <code>database.sql</code> seed file.
+        </div>
+        <span style="font-size: 0.8rem; background: rgba(255, 255, 255, 0.06); padding: 4px 10px; border-radius: 6px; color: #e2e8f0;">
+          API: <code>GET /api/projects</code>
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       EDUCATION SECTION
+       ========================================================================= -->
+  <section class="section" id="education">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-graduation-cap"></i> Academic Path</span>
+        <h2 class="section-title">Education & Academic Coursework</h2>
+        <p class="section-subtitle">
+          Foundational engineering principles, mathematical rigor, and theoretical computer science.
+        </p>
+      </div>
+
+      <div class="timeline-container">
+        <!-- Item 1: Degree -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">Current • Undergrad</span>
+            <h3 class="timeline-title">Bachelor of Technology / Engineering in Computer Engineering</h3>
+            <p class="timeline-institution">University Engineering Curriculum • India</p>
+            <p class="timeline-description">
+              Rigorous engineering study focusing on Data Structures & Algorithms, Object-Oriented Programming, Database Management Systems (DBMS), Operating Systems, Software Engineering, and Computer Networks. Building hands-on prototypes and participating in technical hackathons.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 2: Higher Secondary -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">Higher Secondary Certificate (HSC)</span>
+            <h3 class="timeline-title">Class XII - Science & Mathematics</h3>
+            <p class="timeline-institution">Higher Secondary Board Examination</p>
+            <p class="timeline-description">
+              Specialized in Physics, Chemistry, and Advanced Mathematics. Built strong analytical, calculus, and logical problem-solving foundations.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 3: Secondary School -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">Secondary School Certificate (SSC)</span>
+            <h3 class="timeline-title">Class X - High School Matriculation</h3>
+            <p class="timeline-institution">Secondary Education Board</p>
+            <p class="timeline-description">
+              Excelled in Mathematics, Science, and Information Technology, sparking a lifelong interest in software development and computing systems.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       CERTIFICATIONS SECTION
+       ========================================================================= -->
+  <section class="section" id="certifications">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-award"></i> Credentials</span>
+        <h2 class="section-title">Certifications & Milestones</h2>
+        <p class="section-subtitle">
+          Industry-focused training, hackathon participation, and verified skill badges.
+        </p>
+      </div>
+
+      <div class="cert-grid">
+        <!-- Cert 1 -->
+        <div class="cert-card">
+          <div class="cert-badge-icon">
+            <i class="fa-solid fa-certificate"></i>
+          </div>
+          <span class="cert-issuer">Thiranex Internship</span>
+          <h3 class="cert-title">Full-Stack Web Development Internship</h3>
+          <p class="cert-description">
+            Practical industry immersion designing full-stack web applications with Node.js, Express, MySQL, and responsive dark-mode frontends. Emphasizing clean folder structures, REST APIs, and database migrations.
+          </p>
+        </div>
+
+        <!-- Cert 2 -->
+        <div class="cert-card">
+          <div class="cert-badge-icon" style="color: #38bdf8; background: rgba(56, 189, 248, 0.1);">
+            <i class="fa-solid fa-trophy"></i>
+          </div>
+          <span class="cert-issuer">National Hackathon</span>
+          <h3 class="cert-title">Smart India Hackathon (SIH) Participant</h3>
+          <p class="cert-description">
+            Collaborated in team prototyping for "Mausam – Personalized Weather Experience", creating interactive weather forecasts, hazard advisory modules, and user alert systems under hackathon timeframes.
+          </p>
+        </div>
+
+        <!-- Cert 3 -->
+        <div class="cert-card">
+          <div class="cert-badge-icon" style="color: #10b981; background: rgba(16, 185, 129, 0.1);">
+            <i class="fa-solid fa-database"></i>
+          </div>
+          <span class="cert-issuer">Technical Training</span>
+          <h3 class="cert-title">Relational Database & SQL Specialization</h3>
+          <p class="cert-description">
+            Hands-on database architecture covering 3NF normalization, transactional ACID compliance, indexing, prepared queries, and connection pool management in MySQL and MariaDB.
+          </p>
+        </div>
+
+        <!-- Cert 4 -->
+        <div class="cert-card">
+          <div class="cert-badge-icon" style="color: #ec4899; background: rgba(236, 72, 153, 0.1);">
+            <i class="fa-solid fa-brain"></i>
+          </div>
+          <span class="cert-issuer">Data Science Foundation</span>
+          <h3 class="cert-title">Machine Learning & Python Analytics</h3>
+          <p class="cert-description">
+            Applied machine learning principles with Scikit-learn, XGBoost, and SHAP for explainable AI, feature engineering, cross-validation, and predictive data pipelines.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       CONTACT SECTION
+       ========================================================================= -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-envelope"></i> Get In Touch</span>
+        <h2 class="section-title">Let's Collaborate On Something Great</h2>
+        <p class="section-subtitle">
+          Have an internship inquiry, project discussion, or engineering question? Drop a message below and it will be stored directly in my MySQL database.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Info Cards -->
+        <div class="contact-info-cards">
+          <div class="contact-card">
+            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div class="contact-details">
+              <h4>Direct Email</h4>
+              <p><a href="mailto:anshu.thakur.dev@example.com">anshu.thakur.dev@example.com</a></p>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="contact-details">
+              <h4>Location</h4>
+              <p>India (Available for Remote & On-Site Roles)</p>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon"><i class="fa-solid fa-building-user"></i></div>
+            <div class="contact-details">
+              <h4>Internship Trainee</h4>
+              <p>Thiranex Web Development Program</p>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon"><i class="fa-solid fa-code-branch"></i></div>
+            <div class="contact-details">
+              <h4>Open Source & Code</h4>
+              <p><a href="https://github.com" target="_blank" rel="noopener noreferrer">github.com/anshu-thakur</a></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Submission Form -->
+        <div class="contact-form-wrapper">
+          <!-- Live Form Feedback Alert -->
+          <div class="form-status" id="formStatus"></div>
+
+          <form id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name" class="form-label">Your Full Name *</label>
+                <input 
+                  type="text" 
+                  id="name" 
+                  name="name" 
+                  class="form-input" 
+                  placeholder="e.g. Rahul Sharma" 
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="form-label">Your Email Address *</label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  class="form-input" 
+                  placeholder="e.g. rahul@company.com" 
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="subject" class="form-label">Subject *</label>
+              <input 
+                type="text" 
+                id="subject" 
+                name="subject" 
+                class="form-input" 
+                placeholder="e.g. Internship Opportunity / Technical Collaboration" 
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="message" class="form-label">Your Message *</label>
+              <textarea 
+                id="message" 
+                name="message" 
+                class="form-textarea" 
+                placeholder="Write your message here... Submissions are safely saved into the MySQL database." 
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="submitBtn" style="width: 100%;">
+              <i class="fa-solid fa-paper-plane"></i> Send Message to MySQL DB
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h3>Anshu Thakur <span class="gradient-text">Portfolio</span></h3>
+          <p>Computer Engineering Student & Full-Stack Developer • Thiranex Internship</p>
+        </div>
+
+        <div class="footer-socials">
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="mailto:anshu.thakur.dev@example.com" class="social-link" title="Email" aria-label="Email">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Anshu Thakur. All rights reserved. Built with HTML, CSS, JavaScript, Node.js, Express & MySQL.</p>
+        <p>Thiranex Internship Project</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top of page">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <!-- Client Application Script -->
+  <script src="/js/main.js"></script>
+</body>
+</html>

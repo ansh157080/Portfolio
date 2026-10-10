@@ -1,0 +1,28 @@
+{
+  "name": "anshu-portfolio",
+  "version": "1.0.0",
+  "description": "Full-stack Personal Portfolio Website for Anshu Thakur with Node.js, Express, and MySQL",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "init-db": "node src/scripts/initDb.js",
+    "test": "node --test tests/api.test.js"
+  },
+  "keywords": [
+    "portfolio",
+    "fullstack",
+    "express",
+    "nodejs",
+    "mysql",
+    "thiranex"
+  ],
+  "author": "Anshu Thakur",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mysql2": "^3.12.0"
+  }
+}
