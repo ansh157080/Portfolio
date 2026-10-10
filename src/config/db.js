@@ -7,18 +7,6 @@ dotenv.config();
 const SEED_PROJECTS = [
   {
     id: 1,
-    title: 'Suraksha Kawach – AI Powered Fraud Intelligence System',
-    subtitle: 'Real-time Financial Fraud Detection & Analytics',
-    description: 'An AI/ML-based fraud detection prototype that analyzes transactions, estimates fraud risk, and provides explainable insights.',
-    category: 'AI / Machine Learning',
-    technologies: 'Python, Streamlit, XGBoost, SHAP, Pandas',
-    github_url: '#',
-    demo_url: '#',
-    image_url: '/assets/suraksha-kawach.svg',
-    featured: 1
-  },
-  {
-    id: 2,
     title: 'Mausam – Personalized Weather Experience',
     subtitle: 'Smart Meteorological Advisory & Interactive Forecast',
     description: 'A personalized weather web prototype providing weather information, safety alerts, and useful weather-related insights.',
@@ -30,18 +18,19 @@ const SEED_PROJECTS = [
     featured: 1
   },
   {
-    id: 3,
-    title: 'Crime Record Management System',
-    subtitle: 'Digital Case Tracking & Law Enforcement Records',
-    description: 'A centralized digital record management platform enabling law enforcement to log First Information Reports (FIRs), manage criminal profiles, and track investigation case statuses securely.',
-    category: 'Full Stack / Database',
-    technologies: 'Java, MySQL, HTML, CSS, JavaScript, Express',
+    id: 2,
+    title: 'Suraksha Kawach – AI Powered Fraud Intelligence System',
+    subtitle: 'Real-time Financial Fraud Detection & Analytics',
+    description: 'An AI/ML-based fraud detection prototype that analyzes transactions, estimates fraud risk, and provides explainable insights.',
+    category: 'AI / Machine Learning',
+    technologies: 'Python, Streamlit, XGBoost, SHAP, Pandas',
     github_url: '#',
-    demo_url: '#',
-    image_url: '/assets/crime-management.svg',
+    demo_url: '',
+    image_url: '/assets/suraksha-kawach.svg',
     featured: 1
   }
 ];
+
 
 // Base database connection configuration
 const dbConfig = {

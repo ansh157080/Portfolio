@@ -37,24 +37,12 @@ CREATE TABLE IF NOT EXISTS contacts (
 
 -- 4. Initial Seed Data for Projects
 -- Clean up existing initial seed rows to prevent duplicate inserts if re-run
-DELETE FROM projects WHERE id IN (1, 2, 3);
+DELETE FROM projects;
 
 INSERT INTO projects (id, title, subtitle, description, category, technologies, github_url, demo_url, image_url, featured)
 VALUES
 (
   1,
-  'Suraksha Kawach – AI Powered Fraud Intelligence System',
-  'Real-time Financial Fraud Detection & Analytics',
-  'An AI/ML-based fraud detection prototype that analyzes transactions, estimates fraud risk, and provides explainable insights.',
-  'AI / Machine Learning',
-  'Python, Streamlit, XGBoost, SHAP, Pandas',
-  '#',
-  '#',
-  '/assets/suraksha-kawach.svg',
-  1
-),
-(
-  2,
   'Mausam – Personalized Weather Experience',
   'Smart Meteorological Advisory & Interactive Forecast',
   'A personalized weather web prototype providing weather information, safety alerts, and useful weather-related insights.',
@@ -66,14 +54,15 @@ VALUES
   1
 ),
 (
-  3,
-  'Crime Record Management System',
-  'Digital Case Tracking & Law Enforcement Records',
-  'A centralized digital record management platform enabling law enforcement to log First Information Reports (FIRs), manage criminal profiles, and track investigation case statuses securely.',
-  'Full Stack / Database',
-  'Java, MySQL, HTML, CSS, JavaScript, Express',
+  2,
+  'Suraksha Kawach – AI Powered Fraud Intelligence System',
+  'Real-time Financial Fraud Detection & Analytics',
+  'An AI/ML-based fraud detection prototype that analyzes transactions, estimates fraud risk, and provides explainable insights.',
+  'AI / Machine Learning',
+  'Python, Streamlit, XGBoost, SHAP, Pandas',
   '#',
-  '#',
-  '/assets/crime-management.svg',
+  '',
+  '/assets/suraksha-kawach.svg',
   1
 );
+

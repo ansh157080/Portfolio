@@ -34,19 +34,26 @@ test('GET /api/health returns 200 with database status', async () => {
   assert.strictEqual(data.database.status, 'connected');
 });
 
-test('GET /api/projects returns seeded portfolio projects', async () => {
+test('GET /api/projects returns seeded portfolio projects in correct order', async () => {
   const res = await fetch(`${baseUrl}/api/projects`);
   assert.strictEqual(res.status, 200);
   const json = await res.json();
   assert.strictEqual(json.success, true);
   assert.ok(Array.isArray(json.data));
-  assert.ok(json.data.length >= 3);
+  assert.strictEqual(json.data.length, 2);
 
+  // Mausam should be first
+  assert.ok(json.data[0].title.includes('Mausam'));
+
+  // Suraksha Kawach should be second
+  assert.ok(json.data[1].title.includes('Suraksha Kawach'));
+  assert.strictEqual(json.data[1].demo_url, '');
+
+  // Crime Record should be completely removed
   const titles = json.data.map(p => p.title);
-  assert.ok(titles.some(t => t.includes('Suraksha Kawach')));
-  assert.ok(titles.some(t => t.includes('Mausam')));
-  assert.ok(titles.some(t => t.includes('Crime Record')));
+  assert.ok(!titles.some(t => t.includes('Crime Record')));
 });
+
 
 test('GET /api/projects?category=AI / Machine Learning filters correctly', async () => {
   const res = await fetch(`${baseUrl}/api/projects?category=AI / Machine Learning`);

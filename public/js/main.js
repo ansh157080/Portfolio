@@ -153,8 +153,25 @@ document.addEventListener('DOMContentLoaded', () => {
         .join('');
 
       const githubUrl = project.github_url || '#';
-      const demoUrl = project.demo_url || '#';
-      const imageUrl = project.image_url || '/assets/suraksha-kawach.svg';
+      const demoUrl = project.demo_url || '';
+      const imageUrl = project.image_url || '/assets/mausam.svg';
+
+      // For Suraksha Kawach project, omit the Live Demo button
+      const isSuraksha = (project.title || '').toLowerCase().includes('suraksha');
+      const showLiveDemo = Boolean(demoUrl && demoUrl.trim() !== '' && !isSuraksha);
+
+      const liveDemoButton = showLiveDemo ? `
+        <a 
+          href="${escapeHtml(demoUrl)}" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="project-btn project-btn-demo"
+          title="Open Live Demonstration"
+        >
+          <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+        </a>
+      ` : '';
+
 
       return `
         <article class="project-card" data-category="${escapeHtml(project.category)}">
@@ -164,7 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
               alt="${escapeHtml(project.title)}" 
               class="project-thumbnail"
               loading="lazy"
-              onerror="this.src='/assets/suraksha-kawach.svg'"
+              onerror="this.src='/assets/mausam.svg'"
             />
             <span class="project-category-tag">${escapeHtml(project.category)}</span>
           </div>
@@ -188,15 +205,7 @@ document.addEventListener('DOMContentLoaded', () => {
               >
                 <i class="fa-brands fa-github"></i> GitHub
               </a>
-              <a 
-                href="${escapeHtml(demoUrl)}" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                class="project-btn project-btn-demo"
-                title="Open Live Demonstration"
-              >
-                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
-              </a>
+              ${liveDemoButton}
             </div>
           </div>
         </article>

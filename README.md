@@ -29,9 +29,8 @@ This application connects a vanilla **HTML, CSS, and JavaScript** frontend with 
    - **Contact**: Interactive form with real-time feedback and direct MySQL database persistence.
 
 3. **Featured Projects (Stored in MySQL)**:
-   - **Suraksha Kawach – AI Powered Fraud Intelligence System**: AI/ML fraud detection prototype analyzing transactions with XGBoost, SHAP explainability, and Streamlit.
-   - **Mausam – Personalized Weather Experience**: Smart meteorological web prototype with real-time weather alerts and interactive insights (Smart India Hackathon).
-   - **Crime Record Management System**: Centralized digital case management system enabling law enforcement to log FIRs, manage criminal history, and track investigation updates.
+   - **Mausam – Personalized Weather Experience** *(Positioned 1st)*: Smart meteorological web prototype with real-time weather alerts and interactive insights (Smart India Hackathon). Features GitHub & Live Demo buttons.
+   - **Suraksha Kawach – AI Powered Fraud Intelligence System** *(Positioned 2nd)*: AI/ML fraud detection prototype analyzing transactions with XGBoost, SHAP explainability, and Streamlit. Features GitHub button (Live demo button omitted per specification).
 
 4. **Dynamic REST API & MySQL Integration**:
    - Projects are fetched dynamically from MySQL via `GET /api/projects`.
@@ -77,9 +76,8 @@ Anshu_portfolio/
     │   └── main.js       # API fetching, typing animation, category filtering, form submit
     └── assets/
         ├── avatar.svg            # Developer profile graphic
-        ├── suraksha-kawach.svg   # Suraksha Kawach project thumbnail
         ├── mausam.svg            # Mausam weather project thumbnail
-        └── crime-management.svg  # Crime Record Management thumbnail
+        └── suraksha-kawach.svg   # Suraksha Kawach project thumbnail
 ```
 
 ---
@@ -154,7 +152,7 @@ npm run init-db
 This command will:
 1. Automatically create the database `portfolio_db` if it doesn't exist.
 2. Create tables `projects` and `contacts`.
-3. Seed the initial projects: **Suraksha Kawach**, **Mausam**, and **Crime Record Management System**.
+3. Seed the initial projects in order: **Mausam** (1st) and **Suraksha Kawach** (2nd).
 
 *(Alternatively, you can import `database.sql` directly into **phpMyAdmin** at `http://localhost/phpmyadmin`)*.
 
