@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const formStatus = document.getElementById('formStatus');
   const submitBtn = document.getElementById('submitBtn');
   const backToTopBtn = document.getElementById('backToTop');
-  const dbStatusBadge = document.getElementById('dbStatusBadge');
   const typingElement = document.getElementById('typingRole');
 
   // State
@@ -66,36 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
   typeEffect();
 
   // =========================================================================
-  // 2. BACKEND & DATABASE HEALTH CHECK
-  // =========================================================================
-  async function checkServerHealth() {
-    try {
-      const res = await fetch('/api/health');
-      if (!res.ok) throw new Error('Health check non-200');
-      const data = await res.json();
-
-      if (dbStatusBadge) {
-        if (data.database && data.database.status === 'connected') {
-          dbStatusBadge.innerHTML = '<span class="status-dot"></span> MySQL Active';
-          dbStatusBadge.className = 'db-badge';
-          dbStatusBadge.title = `Connected to database: ${data.database.databaseName}`;
-        } else {
-          dbStatusBadge.innerHTML = '<span class="status-dot"></span> Offline DB';
-          dbStatusBadge.className = 'db-badge disconnected';
-          dbStatusBadge.title = 'MySQL offline. Serving local seed records.';
-        }
-      }
-    } catch (err) {
-      if (dbStatusBadge) {
-        dbStatusBadge.innerHTML = '<span class="status-dot"></span> Local Mode';
-        dbStatusBadge.className = 'db-badge disconnected';
-      }
-    }
-  }
-  checkServerHealth();
-
-  // =========================================================================
-  // 3. FETCH AND RENDER PROJECTS FROM EXPRESS REST API
+  // 2. FETCH AND RENDER PROJECTS FROM EXPRESS REST API
   // =========================================================================
   async function fetchProjects(category = 'all') {
     if (!projectsContainer) return;

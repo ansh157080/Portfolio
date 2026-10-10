@@ -48,8 +48,8 @@ VALUES
   'A personalized weather web prototype providing weather information, safety alerts, and useful weather-related insights.',
   'Web Development / SIH',
   'HTML, CSS, JavaScript, Node.js, Express, OpenWeather API',
-  '#',
-  '#',
+  'https://github.com/ansh157080/Mausam-',
+  'https://mausam-personalized-weather-intelligence.ai.studio/',
   '/assets/mausam.svg',
   1
 ),
@@ -60,7 +60,7 @@ VALUES
   'An AI/ML-based fraud detection prototype that analyzes transactions, estimates fraud risk, and provides explainable insights.',
   'AI / Machine Learning',
   'Python, Streamlit, XGBoost, SHAP, Pandas',
-  '#',
+  'https://github.com/ansh157080/Suraksha-Kawach',
   '',
   '/assets/suraksha-kawach.svg',
   1

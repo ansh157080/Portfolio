@@ -12,8 +12,8 @@ const SEED_PROJECTS = [
     description: 'A personalized weather web prototype providing weather information, safety alerts, and useful weather-related insights.',
     category: 'Web Development / SIH',
     technologies: 'HTML, CSS, JavaScript, Node.js, Express, OpenWeather API',
-    github_url: '#',
-    demo_url: '#',
+    github_url: 'https://github.com/ansh157080/Mausam-',
+    demo_url: 'https://mausam-personalized-weather-intelligence.ai.studio/',
     image_url: '/assets/mausam.svg',
     featured: 1
   },
@@ -24,7 +24,7 @@ const SEED_PROJECTS = [
     description: 'An AI/ML-based fraud detection prototype that analyzes transactions, estimates fraud risk, and provides explainable insights.',
     category: 'AI / Machine Learning',
     technologies: 'Python, Streamlit, XGBoost, SHAP, Pandas',
-    github_url: '#',
+    github_url: 'https://github.com/ansh157080/Suraksha-Kawach',
     demo_url: '',
     image_url: '/assets/suraksha-kawach.svg',
     featured: 1

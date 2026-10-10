@@ -101,4 +101,7 @@ test('POST /api/contact saves valid submission into MySQL database', async () =>
   assert.strictEqual(listRes.status, 200);
   const listJson = await listRes.json();
   assert.ok(listJson.data.some(c => c.email === 'recruiter@thiranex.com'));
+
+  // Cleanup: remove the test record so it doesn't accumulate in the database
+  await pool.query('DELETE FROM contacts WHERE email = ?', ['recruiter@thiranex.com']);
 });
