@@ -41,7 +41,8 @@ const dbConfig = {
   port: Number(process.env.DB_PORT) || 3306,
   waitForConnections: true,
   connectionLimit: 10,
-  queueLimit: 0
+  queueLimit: 0,
+  ssl: process.env.DB_SSL === 'true' ? { rejectUnauthorized: false } : undefined
 };
 
 // Create a connection pool targeting portfolio_db
@@ -52,22 +53,27 @@ const pool = mysql.createPool(dbConfig);
  * This ensures smooth one-command startup for Windows, XAMPP, and standalone MySQL.
  */
 async function initializeDatabase() {
-  let rootConnection;
+  // 1. Try to ensure the database exists. On hosted MySQL (e.g. TiDB Cloud) the
+  //    database is pre-created and CREATE DATABASE is denied — that is fine, we
+  //    still proceed to create tables inside the existing database.
   try {
-    // 1. Connect without selecting database to ensure database existence
-    rootConnection = await mysql.createConnection({
+    const rootConnection = await mysql.createConnection({
       host: dbConfig.host,
       user: dbConfig.user,
       password: dbConfig.password,
-      port: dbConfig.port
+      port: dbConfig.port,
+      ssl: dbConfig.ssl
     });
-
     await rootConnection.query(
       `CREATE DATABASE IF NOT EXISTS \`${dbConfig.database}\` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;`
     );
     await rootConnection.end();
+  } catch (dbErr) {
+    console.warn(`ℹ️ Database creation skipped (${dbErr.message}) — using existing database "${dbConfig.database}".`);
+  }
 
-    // 2. Create tables inside the database
+  // 2. Create tables inside the database
+  try {
     const conn = await pool.getConnection();
     try {
       // Projects table
